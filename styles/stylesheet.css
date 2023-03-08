@@ -1,3 +1,24 @@
+/* CUSTOM FONTS */
+@font-face {
+    font-family: playtime;
+    src: url(../fonts/playtime.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: playtime3d;
+    src: url(../fonts/playtime3d.woff)format("woff");
+    font-display: swap;
+}
+
+body {
+    font-family: playtime, sans-serif;
+}
+
+.site-name {
+    font-family: playtime3d, sans-serif;
+}
+
 /* CSS VARIABLES */
 :root {
     --color1: #ffffff;
@@ -121,7 +142,7 @@ nav.activated {
 /* END OF RESPONSIVE MENU BUTTON */
 
 /* NAV MEDIA QUERY */
-@media (min-width: 43.75em) {
+@media (min-width: 50em) {
     .menu-btn {
 		display: none;
 	}
@@ -132,7 +153,7 @@ nav.activated {
 
     .site-name {
         margin-left: 2rem;
-        width: 15rem;
+        width: 20rem;
     }
 
     li:first-child {
@@ -153,11 +174,11 @@ nav.activated {
 
 /* HEADER LINKS */
 h1 a {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 a[href="#"] {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 a {
@@ -195,7 +216,6 @@ main {
 
 .story a + p {
     color: grey;
-    font-weight: bold;
 }
 
 .story > img {
@@ -216,6 +236,7 @@ main {
 .story h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    font-size: 1.4rem;
 }
 
 /* WEATHER */
@@ -256,7 +277,9 @@ main {
 }
 
 .newsletter p {
+    margin-top: 0;
     padding-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .sign-up {
@@ -351,5 +374,6 @@ footer {
     .top-stories {
         grid-row: 1;
         grid-column: 2;
+        font-size: 2.3rem;
     }
 }

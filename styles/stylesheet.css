@@ -1,3 +1,12 @@
+/* CSS VARIABLES */
+:root {
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #5887FF;
+    --color4: #cccccc;
+    --mainborder: solid 2px rgb(202, 202, 202);
+}
+
 /* Utility Class */
 .text {
     position: absolute;
@@ -16,7 +25,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: var(--color2);
 }
 
 li {
@@ -34,7 +43,7 @@ ul {
 }
 
 nav {
-    background-color: brown;
+    background-color: var(--color2);
     width: 100%;
     visibility: hidden;
     overflow: hidden;
@@ -56,7 +65,7 @@ nav {
     display: block;
     width: 100%;
     height: 0.2rem;
-    background-color: black;
+    background-color: var(--color1);
     position: relative;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
@@ -67,7 +76,7 @@ nav {
     display: block;
     width: 100%;
     height: 0.2rem;
-    background-color: black;
+    background-color: var(--color1);
     border-radius: 0.5rem;
     position: absolute;
     top: 10px;
@@ -79,7 +88,7 @@ nav {
     display: block;
     width: 100%;
     height: 0.2rem;
-    background-color: black;
+    background-color: var(--color1);
     border-radius: 0.5rem;
     position: absolute;
     top: -10px;
@@ -111,16 +120,236 @@ nav.activated {
 }
 /* END OF RESPONSIVE MENU BUTTON */
 
+/* NAV MEDIA QUERY */
+@media (min-width: 43.75em) {
+    .menu-btn {
+		display: none;
+	}
+
+	header {
+		flex-wrap: nowrap;
+	}
+
+    .site-name {
+        margin-left: 2rem;
+        width: 15rem;
+    }
+
+    li:first-child {
+        padding-top: 1rem;
+    }
+
+	nav {
+		height: auto;
+		visibility: visible;
+	}
+
+	nav ul {
+		display: flex;
+		justify-content: flex-end;
+        margin-right: 2rem;
+	}
+}
+
 /* HEADER LINKS */
 h1 a {
     font-size: 2rem;
 }
 
+a[href="#"] {
+    font-size: 1.1rem;
+}
+
 a {
     text-decoration: none;
-    color: black;
+    color: var(--color1);
+    font-weight: bold;
 }
 
 a:hover {
-    color: blue;
+    color: var(--color3);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+.content-wrapper {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+/* STORIES */
+.story {
+    border-bottom: var(--mainborder);
+    padding-bottom: 1.6rem;
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 20rem;
+}
+
+.story a + p {
+    color: grey;
+    font-weight: bold;
+}
+
+.story > img {
+    border: solid 2px black;
+}
+
+.stories-wrapper {
+    margin-bottom: 5rem;
+}
+
+.story a {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    padding: 0.4rem 0.4rem 0.4rem 0;
+    text-decoration: underline;
+}
+
+.story h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* WEATHER */
+.city:before {
+    content: url(../images/locator.svg);
+}
+
+.weather-info p {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.weather-info img {
+    width: 5rem;
+    grid-row: 2;
+    padding-left: 1rem;
+}
+
+.weather-info {
+    border: var(--mainborder);
+    display: grid;
+    grid-template-columns: 6rem 11rem;
+    max-width: 16.93rem;
+    margin: 0 auto 5rem auto;
+}
+
+.weather-info p ~ p {
+    grid-row: 1;
+    font-size: 1.8rem;
+    width: 11rem;
+}
+
+/* NEWSLETTER */
+.newsletter-wrapper {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.newsletter p {
+    padding-bottom: 1rem;
+}
+
+.sign-up {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-media {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 1rem;
+}
+
+/* ATTRIBUTE SELECTOR FOR STORY, WEATHER, AND SOCIAL MEDIA LINKS */
+a[href=""] {
+    color: var(--color2);
+}
+
+a[href=""]:hover {
+    color: var(--color3);
+}
+
+/* FOOTER */
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* MEDIA QUERY LAYOUT */
+@media (min-width: 57.063em) {
+    .story {
+        padding-bottom: 2rem;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .content-wrapper {
+        display: grid;
+        max-width: 57.063rem;
+        margin: 0 auto;
+    }
+
+    .stories-wrapper {
+        display: grid;
+        gap: 0.2rem;
+        grid-template-columns: repeat(3, 18rem);
+    }
+
+    .story:last-child {
+        grid-row: 1;
+        grid-column: span 3;
+        max-width: 100%;
+    }
+
+    .story:last-child h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 81.25em) {
+    .content-wrapper {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 1fr 55rem 25rem 1fr;
+    }
+
+    .stories-wrapper {
+        grid-column: 2;
+    }
+
+    .social-media {
+        position: fixed;
+        top: 40%;
+        margin: 0;
+        width: 4rem;
+        padding: 0;
+        background-color: var(--color1);
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    .social-media a {
+        margin: 0;
+    }
+
+    .top-stories {
+        grid-row: 1;
+        grid-column: 2;
+    }
 }

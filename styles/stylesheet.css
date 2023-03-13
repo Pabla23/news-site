@@ -276,6 +276,10 @@ main {
     text-align: center;
 }
 
+.wn-wrapper:after {
+    content: url(../images/illuminate-electric-v2.svg);
+}
+
 .newsletter p {
     margin-top: 0;
     padding-bottom: 1rem;

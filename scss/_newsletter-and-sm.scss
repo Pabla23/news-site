@@ -1,0 +1,53 @@
+@use "variables" as *;
+
+/* NEWSLETTER */
+.newsletter-wrapper {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.wn-wrapper {
+    padding: 0 2rem;
+    &:after {
+        content: url(../images/illuminate-electric-v2.svg);
+    }
+}
+
+.newsletter {
+    p {
+    margin-top: 0;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    }
+}
+
+.sign-up {
+    padding: 1rem;
+    background-color: $color2;
+    color: $color1;
+    border-radius: 0.5rem;
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-media {
+    font-size: 2.5rem;
+    margin: 4rem 0;
+    text-align: center;
+    a {
+        margin: 0 1rem;
+    }
+}
+
+/* ATTRIBUTE SELECTOR FOR STORY, WEATHER, AND SOCIAL MEDIA LINKS */
+a[href=""] {
+    color: $color2;
+    &:hover {
+        color: $color3;
+    }
+}
+
+/* FOOTER */
+footer {
+    padding: 2rem;
+    text-align: center;
+}

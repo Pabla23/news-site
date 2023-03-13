@@ -1,0 +1,20 @@
+/* CUSTOM FONTS */
+@font-face {
+    font-family: playtime;
+    src: url(../fonts/playtime.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: playtime3d;
+    src: url(../fonts/playtime3d.woff)format("woff");
+    font-display: swap;
+}
+
+body {
+    font-family: playtime, sans-serif;
+}
+
+.site-name {
+    font-family: playtime3d, sans-serif;
+}

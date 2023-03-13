@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+/* STORIES */
+.story {
+    border-bottom: $mainborder;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 20rem;
+
+    & a + p {
+        color: grey;
+    }
+
+    & > img {
+        border: solid 2px black;
+    }
+
+    a {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        padding: 0.4rem 0.4rem 0.4rem 0;
+        text-decoration: underline;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+.stories-wrapper {
+    margin-bottom: 5rem;
+}
+

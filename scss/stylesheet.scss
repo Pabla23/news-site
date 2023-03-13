@@ -1,3 +1,8 @@
 // LOAD PARTIALS
-@use "_reset";
-@use "_nav";
+@use "reset";
+@use "typography";
+@use "nav-and-header";
+@use "mediaqueries-and-misc";
+@use "news-stories";
+@use "weather";
+@use "newsletter-and-sm";

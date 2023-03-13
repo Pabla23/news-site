@@ -1,0 +1,118 @@
+@use "variables" as *;
+
+h1 {
+    a {
+    font-size: 3rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color1;
+    font-weight: bold;
+    &:hover {
+        color: $color3;
+    }
+    &[href="#"] {
+        font-size: 1.2rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+.content-wrapper {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+/* NAV MEDIA QUERY */
+@media (min-width: 50em) {
+    .menu-btn {
+		display: none;
+	}
+
+	header {
+		flex-wrap: nowrap;
+	}
+
+    .site-name {
+        margin-left: 2rem;
+        width: 20rem;
+    }
+
+	nav {
+        height: auto;
+		visibility: visible;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 2rem;
+            li:first-child {
+                padding-top: 1rem;
+            }
+        }
+	}
+}
+
+/* MEDIA QUERY LAYOUT */
+@media (min-width: 57.063em) {
+    .story {
+        padding-bottom: 2rem;
+        margin-bottom: 0;
+        border-bottom: none;
+        &:last-child {
+            grid-row: 1;
+            grid-column: span 3;
+            max-width: 100%;
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .content-wrapper {
+        display: grid;
+        max-width: 57.063rem;
+        margin: 0 auto;
+    }
+
+    .stories-wrapper {
+        display: grid;
+        gap: 0.2rem;
+        grid-template-columns: repeat(3, 18rem);
+    }
+}
+
+@media (min-width: 81.25em) {
+    .content-wrapper {
+        max-width: 100%;
+        grid-template-columns: 1fr 55rem 25rem 1fr;
+    }
+
+    .stories-wrapper {
+        grid-column: 2;
+    }
+
+    .social-media {
+        position: fixed;
+        top: 40%;
+        margin: 0;
+        width: 4rem;
+        padding: 0;
+        background-color: $color1;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .top-stories {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 2.3rem;
+    }
+}
